@@ -12,11 +12,11 @@ mv zshrc.txt .zshrc
 sudo sudo apt-get update
 sudo apt-get install zsh-theme-powerlevel9k; sudo apt-get install zsh-syntax-highlighting; sudo apt-get install powerline fonts-powerline
 ```
-install fonts (already downloaded from https://github.com/romkatv/powerlevel10k/blob/master/font.md)
 
-set in VS Code:
+Install fonts (already downloaded from https://github.com/romkatv/powerlevel10k/blob/master/font.md)
+
+Set in VS Code:
 `"terminal.integrated.fontFamily": "MesloLGS NF"`
-
 
 ## Copy files:
 
@@ -39,14 +39,36 @@ and setup in "Startup Applications")
 `cupsd.conf.txt` -> `/etc/cups/cupsd.conf`
 (and add printer in system Settings)
 
-
-### YT-DLP
+## YT-DLP
 
 sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
 sudo chmod a+rx /usr/local/bin/yt-dlp
 
+### Update:
 
-### YOUTUBE-DL
+`yt-dlp -U`
+
+### Download video:
+
+```shell
+yt-dlp -S 'res:1080' --embed-thumbnail --embed-subs --embed-metadata --download-archive videos.txt --merge-output-format mp4 '<URL>'
+```
+
+```shell
+yt-dlp -S 'res:1080' --embed-thumbnail --embed-subs --embed-metadata --download-archive videos.txt --merge-output-format mp4 -o '%(channel)s/%(title)s.%(ext)s' '<URL>'
+```
+
+### Download music in `mp3` format:
+
+```shell
+yt-dlp -f 'ba' --extract-audio --download-archive videos.txt --audio-format mp3 '<URL>'
+```
+
+```shell
+yt-dlp -f 'ba' --extract-audio --download-archive videos.txt --audio-format mp3 -o '%(channel)s/%(title)s.%(ext)s' '<URL>'
+```
+
+## YOUTUBE-DL (deprecated)
 
 sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
 sudo chmod a+rx /usr/local/bin/youtube-dl
