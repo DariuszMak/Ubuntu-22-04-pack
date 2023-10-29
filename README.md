@@ -30,6 +30,8 @@ Set in VS Code:
 (with command to list everything: sudo lshw -class network -short
 and setup in "Startup Applications")
 
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/ypFn2HI1y68/0.jpg)](http://www.youtube.com/watch?v=ypFn2HI1y68)
+
 `sysctl.conf` -> `/etc`
 (with command: sudo sysctl -p)
 
