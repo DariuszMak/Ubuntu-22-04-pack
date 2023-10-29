@@ -41,6 +41,8 @@ and setup in "Startup Applications")
 `cupsd.conf.txt` -> `/etc/cups/cupsd.conf`
 (and add printer in system Settings)
 
+`Pulseeffects/*` -> `~/.config/PulseEffects/output/`
+
 ## YT-DLP
 
 sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
